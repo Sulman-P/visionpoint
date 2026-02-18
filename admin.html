@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>VisionPoint Admin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="admin-container">
+  <aside class="sidebar">
+    <h2>Admin Panel</h2>
+    <button onclick="loadStats()">Dashboard</button>
+    <button onclick="loadUsers()">Users</button>
+    <button onclick="loadDocs()">Documents</button>
+    <button onclick="loadRevenue()">Revenue</button>
+  </aside>
+
+  <main class="content">
+    <h1>Dashboard</h1>
+    <div id="stats"></div>
+    <div id="output"></div>
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="admin.js"></script>
+
+</body>
+</html>

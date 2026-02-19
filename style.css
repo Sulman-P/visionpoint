@@ -1,156 +1,226 @@
+/* ===============================
+   GLOBAL STYLES
+=================================*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
 }
 
 body {
-    background: #f4f4f4;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #222;
+    line-height: 1.6;
 }
 
-/* NAVBAR */
+/* ===============================
+   NAVIGATION BAR
+=================================*/
 header {
     position: fixed;
     width: 100%;
     top: 0;
-    background: rgba(20, 40, 80, 0.9);
+    left: 0;
+    background: rgba(10, 25, 60, 0.95);
+    backdrop-filter: blur(8px);
     display: flex;
     justify-content: space-between;
-    padding: 15px 40px;
-    color: white;
+    align-items: center;
+    padding: 15px 8%;
     z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
 }
 
 header nav a {
-    color: white;
+    color: #fff;
     text-decoration: none;
-    margin-left: 20px;
+    margin-left: 25px;
     font-weight: 500;
+    transition: 0.3s ease;
 }
 
 header nav a:hover {
-    color: #ffcc00;
+    color: #ffb400;
 }
 
-/* HERO */
+/* ===============================
+   HERO SECTION
+=================================*/
 .hero {
-    background: url("background.jpg") no-repeat center center/cover;
-}
     height: 100vh;
+    background: linear-gradient(
+        rgba(5, 20, 50, 0.75),
+        rgba(5, 20, 50, 0.85)
+    ),
+    url("background.jpg") no-repeat center center;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0 20px;
     text-align: center;
 }
 
 .overlay {
-    background: rgba(0,0,0,0.5);
-    padding: 50px;
-    border-radius: 10px;
-    color: white;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    padding: 50px 60px;
+    border-radius: 15px;
+    color: #fff;
+    max-width: 800px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
 .overlay h1 {
     font-size: 48px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    font-weight: 700;
 }
 
 .overlay p {
     font-size: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .sub {
     font-size: 16px;
-    margin-bottom: 20px;
+    opacity: 0.9;
+    margin-bottom: 25px;
 }
 
-/* BUTTONS */
+/* ===============================
+   BUTTONS
+=================================*/
 .btn-primary {
-    background: #ffb400;
+    background: linear-gradient(45deg, #ffb400, #ff9900);
     border: none;
-    padding: 12px 25px;
+    padding: 14px 28px;
     font-size: 16px;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
     font-weight: bold;
-}
-
-.btn-dark {
-    background: #1b2a4e;
-    color: white;
-    border: none;
-    padding: 12px;
-    margin-top: 10px;
-    cursor: pointer;
-    border-radius: 5px;
+    transition: 0.3s ease;
+    color: #000;
 }
 
 .btn-primary:hover {
-    background: #ffaa00;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 180, 0, 0.4);
 }
 
-/* CATEGORIES */
+.btn-dark {
+    background: #0a193c;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-dark:hover {
+    background: #142f66;
+}
+
+/* ===============================
+   CATEGORIES SECTION
+=================================*/
 .categories {
-    padding: 60px 10%;
+    padding: 80px 10%;
     text-align: center;
 }
 
 .categories h2 {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    font-size: 32px;
+    color: #0a193c;
 }
 
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
 }
 
 .card {
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    font-weight: 600;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
 
 .card span {
     display: block;
-    font-weight: normal;
+    margin-top: 8px;
     font-size: 14px;
-    margin-top: 5px;
-    color: #555;
+    color: #666;
 }
 
-/* AUTH SECTION */
+/* ===============================
+   AUTH SECTION
+=================================*/
 .auth-section {
     display: flex;
     gap: 40px;
-    padding: 60px 10%;
+    padding: 80px 10%;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .form-card {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    width: 350px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    background: #fff;
+    padding: 35px;
+    border-radius: 15px;
+    width: 360px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.form-card h3 {
+    margin-bottom: 20px;
+    color: #0a193c;
 }
 
 .form-card input,
 .form-card select {
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    transition: 0.2s;
 }
 
-/* UPLOAD */
+.form-card input:focus,
+.form-card select:focus {
+    border-color: #ffb400;
+    outline: none;
+}
+
+/* ===============================
+   UPLOAD SECTION
+=================================*/
 .upload-section {
-    padding: 50px 10%;
+    padding: 80px 10%;
     text-align: center;
+}
+
+.upload-section h3 {
+    font-size: 26px;
+    margin-bottom: 25px;
 }
 
 .upload-box {
@@ -158,26 +228,36 @@ header nav a:hover {
     gap: 15px;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 20px;
 }
 
 .upload-box input {
-    padding: 10px;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
 }
 
-/* FOOTER */
+/* ===============================
+   FOOTER
+=================================*/
 footer {
-    background: #1b2a4e;
-    color: white;
+    background: #0a193c;
+    color: #fff;
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+    padding: 25px;
+    margin-top: 60px;
 }
 
-/* RESPONSIVE */
+/* ===============================
+   RESPONSIVE DESIGN
+=================================*/
 @media (max-width: 768px) {
+
     .overlay h1 {
         font-size: 32px;
+    }
+
+    .overlay {
+        padding: 30px;
     }
 
     .auth-section {
@@ -185,5 +265,3 @@ footer {
         align-items: center;
     }
 }
-
-

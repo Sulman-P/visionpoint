@@ -4,90 +4,81 @@
     <meta charset="UTF-8">
     <title>VisionPoint Exam Portal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- Supabase Library -->
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script defer src="app.js"></script>
 </head>
-
 <body>
 
+<!-- NAVBAR -->
 <header>
-    <h1>VisionPoint Exam Portal</h1>
-    <p>Kenya Junior School Learning Resources</p>
+    <div class="logo">📘 VisionPoint Exam Portal</div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Categories</a>
+        <a href="#">Register</a>
+        <a href="#">Login</a>
+        <a href="#">Upload</a>
+    </nav>
 </header>
 
-<nav>
-    <a href="#home">Home</a>
-    <a href="#categories">Categories</a>
-    <a href="#register">Register</a>
-    <a href="#login">Login</a>
-    <a href="#upload">Upload</a>
-</nav>
-
-<!-- HERO -->
-<section id="home" class="hero">
-    <h2>Access Quality Exam Resources</h2>
-    <p>Purchase, Download and Upload Learning Materials Easily.</p>
-</section>
-
-<!-- CATEGORIES -->
-<section id="categories">
-    <h2>Learning Areas</h2>
-
-    <div class="category-grid">
-        <div class="card"><h3>Mathematics</h3></div>
-        <div class="card"><h3>Integrated Science</h3></div>
-        <div class="card"><h3>English</h3></div>
-        <div class="card"><h3>Social Studies</h3></div>
-        <div class="card"><h3>Pre-Technical Studies</h3></div>
-        <div class="card"><h3>CRE / IRE / HRE</h3></div>
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="overlay">
+        <h1>VisionPoint Exam Portal</h1>
+        <p>Kenya Junior School Learning Resources</p>
+        <p class="sub">Purchase, Download and Upload Learning Materials Easily.</p>
+        <button class="btn-primary">Make Payment</button>
     </div>
 </section>
 
-<!-- REGISTER -->
-<section id="register">
-    <h2>Create Account</h2>
-    <form onsubmit="registerUser(); return false;">
-        <input id="fullname" type="text" placeholder="Full Name" required>
-        <input id="email" type="email" placeholder="Email" required>
-        <input id="password" type="password" placeholder="Password" required>
+<!-- LEARNING AREAS -->
+<section class="categories">
+    <h2>Learning Areas (Kenya Junior School)</h2>
+    <div class="card-grid">
+        <div class="card">📊 Mathematics<br><span>Exams, Marking Schemes</span></div>
+        <div class="card">🧪 Integrated Science<br><span>Labs & Practical Papers</span></div>
+        <div class="card">📖 English<br><span>Grammar & Composition</span></div>
+        <div class="card">🌍 Social Studies<br><span>Geography & History</span></div>
+        <div class="card">⚙️ Pre-Technical Studies<br><span>Tech & Practical Skills</span></div>
+        <div class="card">🌙 CRE / IRE / HRE<br><span>Religious Education</span></div>
+    </div>
+</section>
 
-        <select id="role" required>
-            <option value="">Select Role</option>
-            <option value="student">Student</option>
-            <option value="instructor">Instructor</option>
+<!-- AUTH SECTION -->
+<section class="auth-section">
+    <div class="form-card">
+        <h3>Create Account</h3>
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <select>
+            <option>Select Role</option>
+            <option>Student</option>
+            <option>Teacher</option>
         </select>
+        <button class="btn-primary">Register</button>
+    </div>
 
-        <button type="submit">Register</button>
-    </form>
+    <div class="form-card">
+        <h3>User Login</h3>
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+        <button class="btn-dark">Login</button>
+    </div>
 </section>
 
-<!-- LOGIN -->
-<section id="login">
-    <h2>Login</h2>
-    <form onsubmit="loginUser(); return false;">
-        <input id="loginEmail" type="email" placeholder="Email" required>
-        <input id="loginPassword" type="password" placeholder="Password" required>
-        <button type="submit">Login</button>
-    </form>
+<!-- UPLOAD SECTION -->
+<section class="upload-section">
+    <h3>Instructor Upload Section</h3>
+    <div class="upload-box">
+        <input type="text" placeholder="Document Title">
+        <input type="file">
+        <button class="btn-primary">Upload Document</button>
+    </div>
 </section>
 
-<!-- UPLOAD -->
-<section id="upload">
-    <h2>Instructor Upload</h2>
-    <form onsubmit="uploadDocument(); return false;">
-        <input id="docTitle" type="text" placeholder="Document Title" required>
-        <input id="fileInput" type="file" accept=".pdf,.doc,.docx" required>
-        <button type="submit">Upload</button>
-    </form>
-</section>
-
+<!-- FOOTER -->
 <footer>
-    <p>© 2026 VisionPoint Exam Portal</p>
+    © 2026 VisionPoint Exam Portal | Kenya Junior School Resources
 </footer>
 
 </body>

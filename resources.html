@@ -92,7 +92,22 @@
     <a href="index.html">Home</a>
     <a href="resources.html">Resources</a>
 </nav>
+    
+<div class="filter-buttons">
 
+<button onclick="filterSubject('all')">All Subjects</button>
+<button onclick="filterSubject('math')">Mathematics</button>
+<button onclick="filterSubject('science')">Integrated Science</button>
+<button onclick="filterSubject('english')">English</button>
+<button onclick="filterSubject('social')">Social Studies</button>
+<button onclick="filterSubject('pretech')">Pre Technical Studies</button>
+<button onclick="filterSubject('kiswahili')">Kiswahili</button>
+<button onclick="filterSubject('Agriculture')">Agruculture and Nutrition</button>
+<button onclick="filterSubject('Religion')">Religious Education</button>
+<button onclick="filterSubject('creative')">Creative Art</button>
+<button onclick="filterSubject('exams')">Current Exam Papers</button>
+
+</div>
 <div class="page-header">
 <h1>Learning Resources</h1>
 <p>Access Quality Exams and Revision Materials</p>
@@ -127,17 +142,18 @@
 <div class="category">
 
 <h2>Integrated Science</h2>
+<p>Term 1 Assessments</p>
 
 <div class="resource-list">
 
 <div class="resource-card">
 <h3>Grade 7 Science Exam</h3>
-<p>Term 2 Assessment</p>
+<p>Term 1 Assessment</p>
 <a href="#" class="download-btn">Download</a>
 </div>
 
 <div class="resource-card">
-<h3>Science Practical Questions</h3>
+<h3>Science Practical Questions Paper 2</h3>
 <p>Laboratory Activities</p>
 <a href="#" class="download-btn">Download</a>
 </div>
@@ -187,7 +203,34 @@
 <p>Maps and Environment</p>
 <a href="#" class="download-btn">Download</a>
 </div>
+<div class="resource-card math">
+<h3>Grade 7 Mathematics Exam</h3>
+<p>End Term Examination</p>
+<a href="#" class="download-btn">Download</a>
+</div>
 
+<div class="resource-card pretech">
+<h3>Pre Technical Studies Paper</h3>
+<p>Term 1 Assessment</p>
+<a href="#" class="download-btn">Download</a>
+</div>
+
+<div class="resource-card religion">
+<h3>Religious Education Revision</h3>
+<p>Practice Questions,notes on CRE and IRE</p>
+<a href="#" class="download-btn">Download</a>
+</div>
+
+<div class="resource-card creative">
+<h3>Creative Arts Exam</h3>
+<p>Performing Arts,Creative Arts & Physical Education</p>
+<a href="#" class="download-btn">Download</a>
+</div>
+<div class="resource-card exams">
+<h3>ALL Current Exam</h3>
+<p>Performing Arts,Creative Arts & Physical Education</p>
+<a href="#" class="download-btn">Download</a>
+</div>
 </div>
 
 </div>
@@ -197,6 +240,28 @@
 <footer>
 <p>© 2026 VisionPoint Exam Portal</p>
 </footer>
+<script>
 
+function filterSubject(subject){
+
+const cards = document.querySelectorAll(".resource-card");
+
+cards.forEach(card => {
+
+if(subject === "all"){
+card.style.display = "block";
+}
+else if(card.classList.contains(subject)){
+card.style.display = "block";
+}
+else{
+card.style.display = "none";
+}
+
+});
+
+}
+
+</script>
 </body>
 </html>

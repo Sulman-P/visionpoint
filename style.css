@@ -345,4 +345,17 @@ color:white;
 .view-btn:hover{
 background:#1a5bbf;
 }
+.stats{
+display:flex;
+justify-content:center;
+gap:60px;
+padding:50px;
+background:white;
+text-align:center;
+}
+
+.stats h2{
+font-size:40px;
+color:#0d47a1;
+}
 
